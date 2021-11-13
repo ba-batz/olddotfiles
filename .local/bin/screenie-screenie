@@ -1,0 +1,3 @@
+#!/bin/sh
+i=$(date "+ %Y%m%d%H%M%S")
+import -window root ~/.screenies/screenie$((i)).png && xclip -se c -t image/png < ~/.screenies/screenie$((i)).png

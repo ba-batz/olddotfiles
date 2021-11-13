@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if  [ $(nmcli | grep -wc wireguard) -eq 1 ]
+then printf "嬨 $(nmcli | grep '"mullvad-')  "
+fi

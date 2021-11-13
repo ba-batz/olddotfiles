@@ -1,0 +1,9 @@
+#!/bin/bash
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources &
+picom &
+xwallpaper --zoom /usr/share/backgrounds/wallpapers/1630985785368.jpg &&
+setxkbmap de &&
+pulseaudio --daemonize &
+
+exec dwm

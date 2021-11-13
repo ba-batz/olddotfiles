@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "mullvad-toggle"
+if [ "$(nmcli | grep -wc wireguard)" -eq 0 ]
+	then
+		doas wg-quick up "$(find ~/.config/mullvad/ | fzf)"
+	else
+		doas wg-quick down ~/.config/mullvad/"$(doas wg show interfaces).conf"
+fi
+
+kill -39 "$(pidof dwmblocks) "
