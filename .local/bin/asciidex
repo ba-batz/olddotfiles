@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "choose your pokemon: "
+read x
+curl https://fiikus.net/asciiart/pokemon/$x.txt
